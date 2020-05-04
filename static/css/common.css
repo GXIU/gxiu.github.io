@@ -194,7 +194,8 @@ body {
 }
 .footer a {
   text-decoration: underline;
-  color: #000000;
+  /* color: #000000; */
+  color: #8dc6ff;
   padding: 0 4px;
   white-space: nowrap;
 }
