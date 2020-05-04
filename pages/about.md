@@ -1,5 +1,5 @@
 ---
-layout: mypost
+layout: cobalt
 title: 关于我
 ---
 
