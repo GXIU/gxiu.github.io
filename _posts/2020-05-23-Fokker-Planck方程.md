@@ -4,7 +4,7 @@ title: Fokker-Planck方程
 categories: [笔记]
 ---
 
-Update: 2020/05/11
+Update: 2020/05/23
 
 ## Fokker-Planck方程
 
