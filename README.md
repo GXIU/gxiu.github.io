@@ -1,57 +1,76 @@
-# 介绍
+# Frisco
 
-一款 jekyll 主题（[GitHub 地址](https://github.com/TMaize/tmaize-blog)），简洁纯净(主题资源请求<20KB)，未引入任何框架，秒开页面，支持自适应，支持全文检索
+App promotion themed template for Jekyll. Browse through a [live demo](https://brave-submarine.cloudvent.net/).
+Increase the web presence of a App with this configurable theme.
 
-你可以到[TMaize Blog](http://blog.tmaize.net/)查看主题效果，欢迎添加友链
+![Frisco template screenshot](images/_screenshot.jpg)
 
-# 本地运行
+Frisco was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
 
-jekyll 是使用 ruby 写的，所以先自行安装 ruby
+Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Academy](https://learn.cloudcannon.com/).
 
-```
-# 第一次运行先执行 bundle install
-bundle exec jekyll serve --watch --host=0.0.0.0 --port=8080
-```
+## Features
 
-```
-# 国内依赖下载慢可以使用ruby-china的镜像站进行请求重定向
-bundle config mirror.https://rubygems.org https://gems.ruby-china.com
-```
+* Contact form
+* Pre-built pages
+* Pre-styled components
+* Blog with pagination
+* Post category pages
+* Disqus comments for posts
+* Staff and author system
+* Configurable footer
+* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
+* RSS/Atom feed
+* SEO tags
+* Google Analytics
 
-# 项目配置
+## Setup
 
-1. 如果使用自己的域名，`CNAME`文件里的内容请换成你自己的域名，然后 CNAME 解析到`用户名.github.com`
+1. Add your site and author details in `_config.yml`.
+2. Add your Google Analytics and Disqus keys to `_config.yml`.
+3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
 
-2. 如果使用 GitHub 的的域名，请删除`CNAME`文件,然后把你的项目修改为`用户名.github.io`
+## Develop
 
-3. 修改`pages/about.md`中关于我的内容
+Frisco was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
 
-4. 修改`_config.yml`文件，具体作用请参考注释
+Install the dependencies with [Bundler](http://bundler.io/):
 
-5. 清空`post _posts`目录下所有文件，注意是清空，不是删除这两个目录
+~~~bash
+$ bundle install
+~~~
 
-6. 网站的 logo 和 favicon 放在了`static/img/`下，替换即可，大小无所谓，图片比例最好是 1:1
+Run `jekyll` commands through Bundler to ensure you're using the right versions:
 
-7. 如果你是把项目 fork 过去的，想要删除我的提交记录可以先软重置到第一个提交，然后再提交一次，最后强制推送一次就行了
+~~~bash
+$ bundle exec jekyll serve
+~~~
 
-# 使用
+## Editing
 
-文章放在`_posts`目录下，命名为`yyyy-MM-dd-xxxx-xxxx.md`，内容格式如下
+Frisco is already optimised for adding, updating and removing pages, staff, advice, company details and footer elements in CloudCannon.
 
-```yaml
----
-layout: mypost
-title: 标题
-categories: [分类1, 分类2]
----
+### Posts
 
-文章内容，Markdown格式
-```
+* Add, update or remove a post in the *Posts* collection.
+* The **Staff Author** field links to members in the **Staff Members** collection.
+* Documentation pages are organised in the navigation by category, with URLs based on the path inside the `_docs` folder.
+* Change the defaults when new posts are created in `_posts/_defaults.md`.
 
-文章资源放在`posts`目录，如文章文件名是`2019-05-01-theme-usage.md`，则该篇文章的资源需要放在`posts/2019/05/01`下,在文章使用时直接引用即可。当然了，写作的时候会提示资源不存在忽略即可
+### Contact Form
 
-```md
-![这是图片](xxx.png)
+* Preconfigured to work with CloudCannon, but easily changed to another provider (e.g. [FormSpree](https://formspree.io/)).
 
-[xxx.zip 下载](xxx.zip)
-```
+### Staff
+
+* Reused around the site to save multiple editing locations.
+
+### Footer
+
+* Exposed as a data file to give clients better access.
+* Set in the *Data* / *Navigation* section.
+
+### Footer
+
+* Exposed as a data file to give clients better access.
+* Set in the *Data* / *Footer* section.

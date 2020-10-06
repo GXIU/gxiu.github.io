@@ -1,74 +1,121 @@
-encoding: utf-8
+# ----
+# Site
 
-# SEO相关信息
-title: George's Blog
-description: 修格致的个人博客
-keywords: GIS, Mathematics
-author: Gezhi Xiu
-footerText: 'Copyright © 2020'
+title: Frisco Template
+url: "https://brave-submarine.cloudvent.net"
+baseurl:
+google_analytics_key:
+google_maps_javascript_api_key:
+disqus_shortname:
 
-# 这些不要动
-permalink: /posts/:year/:month/:day/:title.html
-kramdown:
-  auto_ids: true
-  input: GFM
-exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock', 'cli.bat']
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /siteicon.png
+description: App marketing template for Jekyll.
+author:
+  name:
+  email:
+  twitter: # twitter username without the @ symbol
+social:
+  name: Frisco Template
+  links:
+    - https://github.com/CloudCannon/frisco-jekyll-template
 
-# 域名配置
-# baseurl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
-domainUrl: 'gxiu.github.io'
-baseurl: '/'
+# -----
+# Build
 
-# 吐个槽地址，会在chat页面中重定向到该地址
-tucaoUrl: https://user.qzone.qq.com/945948215
+timezone: Etc/UTC
 
-# 菜单
-menu:
-  - title: 首页
-    url: /
-  - title: 归类
-    url: /pages/categories.html
-  - title: 读书
-    url: /pages/reading.html
-  - title: 搜索
-    url: /pages/search.html
-  - title: 友链
-    url: /pages/links.html
-  - title: 留言
-    url: /pages/chat.html
-  - title: 关于
-    url: /pages/about.html
+permalink: pretty
 
-# 文章底部广告
-# 位置 _includes/adsense.html
-adsense: true
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-archives
 
-# 自定义插件
-# plugin-mta-stats
-# 腾讯移动分析(https://mta.qq.com)，如果需要请申请自己的，不需要的话 use 请设置为 false
-# plugin-baidu-push
-# 百度收录自动推送，不需要的话 use 请设置为 false
-# plugin-click-effect
-# 页面点击，出现核心主义价值观
-# plugin-mathjax
-# 数学公式支持，比较影响加载速度，请设置为 false
-customPlugins:
-  - use: true
-    file: 'plugin-mta-stats.html'
-    sid: 500581966
-    cid: 500581972
-  - use: true
-    file: 'plugin-baidu-push.html'
-  - use: true
-    file: 'plugin-click-effect.html'
-  - use: true
-    file: 'plugin-mathjax.html'
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
 
-# 友情链接
-links:
-  - title: 龚老师的个人博客
-    url: https://gooong.cn
-  - title: 有趣的一个早就不更新的博客
-    url: http://diaorui.net
-  - title: 董磊师兄的主页
-    url: http://donglei.org/
+collections:
+  staff_members:
+    _hide_content: true
+    _icon: account_circle
+
+paginate: 10
+paginate_path: "/blog/:num/"
+
+jekyll-archives:
+  enabled: ['categories']
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "staff_members"
+    values:
+      _options:
+        image_path:
+          width: 440
+          height: 440
+          uploads_dir: "/images/staff_members"
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+      _options:
+        image:
+          width: 2000
+          height: 1322
+          resize_style: cover
+          uploads_dir: "/images/post_uploads"
+        content:
+          width: 1500
+          height: 2000
+          uploads_dir: "/images/post_uploads"
+  -
+    scope:
+      path: "contact-success.html"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      image:
+        width: 2000
+        height: 1322
+        resize_style: cover
+      bottom_image:
+        width: 2000
+        height: 1322
+        resize_style: cover
+
+# -----------
+# CloudCannon
+
+social_icons:
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - Email
+  - RSS
+
+_comments:
+  description: Text shown when sharing on social media
+  blurb: Short bio or description of this person
