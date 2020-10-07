@@ -1,15 +1,15 @@
 ---
-title: Health effects of friendship
-date: 2016-08-12
-description: How does friendship play a role in your health?
+title: Allee Effects, Phase transitions in epidemic spreading on meta-population structures
+date: 2020-10-07
+description: Why community-wide quarantine is not a 100 % good policy for COVID-19?
 categories:
-  - friendship
   - health
-image: https://source.unsplash.com/collection/375719/2000x1322?a=.png
-author_staff_member: tom
+  - research
+image: https://www.researchgate.net/profile/Xavier_Fauvergue/publication/305716419/figure/fig1/AS:389237858947076@1469812945304/Extinction-vortices-driven-by-Allee-effects-In-ecological-Allee-effects-a-decrease-in.png
+author_staff_member: George
 ---
 
-Conventional wisdom suggests that good friendships enhance an individual's sense of happiness and overall well-being. Indeed, a number of studies have found that strong social supports improve a woman's prospects for good health and longevity. Conversely, loneliness and a lack of social supports have been linked to an increased risk of heart disease, viral infections, and cancer, as well as higher mortality rates overall. Two researchers have even termed friendship networks a "behavioral vaccine" that boosts both physical and mental health.
+Community-wide quarantine may create a denser local population structure, and may increase the $R_0$ value of the epidemic.
 
 ![Man](https://source.unsplash.com/random/1500x1000)
 
