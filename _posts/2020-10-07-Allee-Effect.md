@@ -11,12 +11,18 @@ author_staff_member: George
 
 Community-wide quarantine may create a denser local population structure, and may increase the $R_0$ value of the epidemic.
 
-![Man](https://source.unsplash.com/random/1500x1000)
+<!-- ![Man](https://source.unsplash.com/random/1500x1000) -->
 
-While there is an impressive body of research linking friendship and health, the precise reasons for the connection remain unclear. Most of the studies in this area are large prospective studies that follow people over a period of time, and while there may be a correlation between the two variables (friendship and health status), researchers still do not know if there is a cause and effect relationship, such as the notion that good friendships actually improve health.
+## How is the population structured, and how does quarantine work
 
-![Thai](https://source.unsplash.com/random/1500x1001)
+### Epidemic model in spatially structured meta-population
 
-A number of theories have attempted to explain this link. These theories have included that good friends encourage their friends to lead more healthy lifestyles; that good friends encourage their friends to seek help and access services when needed; that good friends enhance their friends' coping skills in dealing with illness and other health problems; and that good friends actually affect physiological pathways that are protective of health.
+### Epidemic model for purpose-driven visit among meta-population
 
-![lavender flowers](https://source.unsplash.com/random/1500x1002)
+## Invasion threshold in spatial structured populations
+
+<!-- ![Thai](https://source.unsplash.com/random/1500x1001) -->
+
+To find the transition point in the quarantined population framework, we adopt a branching process procedure to describe the epidemic spread across meta-populations. Let us consider a city with $M$ meta-populations, the distribution of population size of each subpopulation is $p_k$ for $k = 1,2,3,\dots$. Within each subpopulation, we assume that the people interact with the rate proportional to its population and statistically equivalent and uncorrelated. Let $J_n$ be the number of newly-become infected communities at iteration $n$, obtaining that $J_n = J_{n-1} \left( 1 - \frac{\sum}{} \right)$
+
+<!-- ![lavender flowers](https://source.unsplash.com/random/1500x1002) -->
