@@ -35,4 +35,9 @@ where $C$ is the average neighbor of a meta-population, $\Phi$ is the probabilit
 
 - When interested in the early process of the model, the term $ \frac{\sum_{m = 0}^{n-1}J_m}{M}\approx 0$, thus $ R_0^* = C\Phi$.
 
-If we denote $ \langle k \rangle $ as  the average degree of the meta-population network, then $ C = \langle k\rangle - 1$. If $ \beta$ is the number of spreaders in an affected meta-population that can travel outside of the meta-population
+If we denote $ \langle k \rangle $ as  the average degree of the meta-population network, then $ C = \langle k\rangle - 1$. If $ \beta$ is the number of spreaders in an affected meta-population that can travel outside of the meta-population, and $f$ as the mobility parameter, then the probability of the spread towards none of the neighbors is
+
+$$
+1 - \left( 1 - \frac{f}{\langle k\rangle} \right) := \Phi.
+
+$$
