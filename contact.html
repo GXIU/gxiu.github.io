@@ -22,7 +22,7 @@ image: 'https://source.unsplash.com/WNAO036c6FM/2000x1322?a=.png'
 	</div>
 </section>
 
-<section class="pad">
+<!-- <section class="pad">
 	<div class="text-container contact-box">
 		<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
 			<input type="hidden" name="_to" value="support@cloudcannon.com" />
@@ -50,7 +50,7 @@ image: 'https://source.unsplash.com/WNAO036c6FM/2000x1322?a=.png'
 			</p>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <div class="map" id="map"></div>
 
@@ -84,3 +84,71 @@ image: 'https://source.unsplash.com/WNAO036c6FM/2000x1322?a=.png'
 	}
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
+
+
+<div class="contact-icons">
+	{% if site.email != null %}
+	<a class="social-link" aria-label="My E-Mail" href="mailto:{{site.email}}">
+	  <div class="social">
+		<svg class="social-svg" viewBox="0 0 48 48">
+		  <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/solid.svg#envelope" | prepend: site.baseurl }}"></use>
+		</svg>
+	  </div>
+	</a>
+	{% endif %}
+  
+	{% if site.github_username != null %}
+	<a class="social-link" aria-label="My GitHub" target="_blank" rel="noreferrer"
+	  href="https://github.com/{{site.github_username}}">
+	  <div class="social">
+		<svg class="social-svg" viewBox="0 0 48 48">
+		  <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#github" | prepend: site.baseurl }}"></use>
+		</svg>
+	  </div>
+	</a>
+	{% endif %}
+  
+	{% if site.codepen_username != null %}
+	<a class="social-link black" aria-label="My Codepen" target="_blank" rel="noreferrer"
+	  href="https://codepen.io/{{site.codepen_username}}">
+	  <div class="social">
+		<svg class="social-svg" viewBox="0 0 48 48">
+		  <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#codepen" | prepend: site.baseurl }}"></use>
+		</svg>
+	  </div>
+	</a>
+	{% endif %}
+  
+	{% if site.dev_username != null %}
+	<a class="social-link black" aria-label="My DEV" target="_blank" rel="noreferrer"
+	  href="https://dev.to/{{site.dev_username}}">
+	  <div class="social">
+		<svg class="social-svg" viewBox="0 0 48 48">
+		  <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#dev" | prepend: site.baseurl }}"></use>
+		</svg>
+	  </div>
+	</a>
+	{% endif %}
+  
+	{% if site.linkedin_username != null %}
+	<a class="social-link linkedin" aria-label="My LinkedIn" target="_blank" rel="noreferrer"
+	  href="https://www.linkedin.com/in/{{site.linkedin_username}}">
+	  <div class="social">
+		<svg class="social-svg" viewBox="0 0 48 48">
+		  <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#linkedin-in" | prepend: site.baseurl }}"></use>
+		</svg>
+	  </div>
+	</a>
+	{% endif %}
+  
+	{% if site.twitter_username != null %}
+	<a class="social-link twitter" aria-label="My Twitter" target="_blank" rel="noreferrer"
+	  href="https://twitter.com/{{site.twitter_username}}">
+	  <div class="social">
+		<svg class="social-svg" viewBox="0 0 48 48">
+		  <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#twitter" | prepend: site.baseurl }}"></use>
+		</svg>
+	  </div>
+	</a>
+	{% endif %}
+  </div>
