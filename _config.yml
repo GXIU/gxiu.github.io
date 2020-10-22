@@ -23,6 +23,9 @@ social:
 # -----
 # Build
 
+kramdown:
+  math_engine: null
+
 timezone: Etc/UTC
 
 permalink: pretty
