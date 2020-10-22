@@ -9,18 +9,15 @@ author_staff_member: George
 
 ---
 
-# Reforming Barriers: how to optimize the traffic efficiency with given structures of the road networks?
+# Reforming Barriers
+
+How to optimize the traffic efficiency with given structures of the road networks?
 
 * What if, in a city, when most of the road networks are constructed, where you cannot widen the streets, but you still want to optimize the traffic efficiency in some way?
 
 ![Coins](https://source.unsplash.com/random/1500x1000)
 
 ## Algorithms
-
-
-
-
-
 
 ## Dissolution
 
