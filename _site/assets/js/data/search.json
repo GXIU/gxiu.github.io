@@ -1,0 +1,21 @@
+[
+  
+  {
+    "title": "Aging mobility",
+    "url": "/posts/CensusExt/",
+    "categories": "Academia, Mobility",
+    "tags": "academia",
+    "date": "2024-11-06 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "inline code part\\[LaTeX_math_expression\\]\\[\\begin{equation}  LaTeX_math_expression  \\label{eq:label_name}\\end{equation}\\]Can be referenced as \\eqref{eq:label_name}.“Lorem ipsum dolor sit amet, \\(La...",
+    "content": "inline code part\\[LaTeX_math_expression\\]\\[\\begin{equation}  LaTeX_math_expression  \\label{eq:label_name}\\end{equation}\\]Can be referenced as \\eqref{eq:label_name}.“Lorem ipsum dolor sit amet, \\(LaTeX_math_expression\\) consectetur adipiscing elit.”  \\(LaTeX_math_expression\\)  \\(LaTeX_math_expression\\)  \\(LaTeX_math_expression\\)"
+  }
+  
+]
+
