@@ -3,7 +3,7 @@ title: Aging mobility
 date: 2024-11-06
 categories: [Academia, Mobility]
 tags: [academia]
-author: 1
+authors: [1]
 description: Short summary of the post.
 toc: true
 comments: false
