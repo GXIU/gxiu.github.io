@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "Interesting Python Packages",
+    "url": "/posts/Packages/",
+    "categories": "toolkits",
+    "tags": "misc",
+    "date": "2024-11-06 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "  dask  plotly  mongodb",
+    "content": "  dask  plotly  mongodb"
+  },
+  
+  {
     "title": "Aging mobility",
     "url": "/posts/CensusExt/",
     "categories": "Academia, Mobility",

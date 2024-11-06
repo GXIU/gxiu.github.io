@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Gezhi Xiu</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-11-06T13:16:29+08:00</updated>
+  <updated>2024-11-06T13:20:09+08:00</updated>
   <author>
     <name>Gezhi Xiu</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Interesting Python Packages</title>
+    <link href="http://localhost:4000/posts/Packages/" rel="alternate" type="text/html" title="Interesting Python Packages" />
+    <published>2024-11-06T00:00:00+08:00</published>
+  
+    <updated>2024-11-06T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Packages/</id>
+    <content src="http://localhost:4000/posts/Packages/" />
+    <author>
+      <name>1</name>
+    </author>
+
+  
+    
+    <category term="toolkits" />
+    
+  
+
+  <summary>A few packages needed to get some familarities.</summary>
+
+  </entry>
 
   
   <entry>
