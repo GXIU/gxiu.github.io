@@ -6,6 +6,7 @@ tags: [academia]
 authors: [1]
 description: Short summary of the post.
 toc: true
+math: true
 comments: false
 mermaid: true
 ---
@@ -15,9 +16,7 @@ mermaid: true
 
 <!-- Block math, keep all blank lines -->
 
-$$
-LaTeX_math_expression
-$$
+$\phi$
 
 <!-- Equation numbering, keep all blank lines  -->
 
@@ -36,6 +35,6 @@ Can be referenced as \eqref{eq:label_name}.
 
 <!-- Inline math in lists, escape the first `$` -->
 
-1. \$$ LaTeX_math_expression $$
-2. \$$ LaTeX_math_expression $$
-3. \$$ LaTeX_math_expression $$
+1. $$ LaTeX_math_expression $$
+2. $$ LaTeX_math_expression $$
+3. $$ LaTeX_math_expression $$

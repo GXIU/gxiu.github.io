@@ -169,9 +169,11 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-# katex: true
+katex: true
+math: true
+head_custom: true
 
-mathjax: true
+# mathjax: true
 
 collections:
   tabs:

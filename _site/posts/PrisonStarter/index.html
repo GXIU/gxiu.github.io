@@ -30,24 +30,26 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Aging mobility" />
+<meta property="og:title" content="Prisonstarter" />
+<meta name="author" content="Gezhi Xiu" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Short summary of the post." />
-<meta property="og:description" content="Short summary of the post." />
-<link rel="canonical" href="http://localhost:4000/posts/CensusExt/" />
-<meta property="og:url" content="http://localhost:4000/posts/CensusExt/" />
+<meta name="description" content="{ “cells”: [ { “cell_type”: “markdown”, “metadata”: {}, “source”: [ “- Here is where we can find the geography of census 2021\n”, “- and I am finally able to find the flow data of UK census.” ] }, { “cell_type”: “code”, “execution_count”: 4, “metadata”: {}, “outputs”: [], “source”: [ “# census itself\n”, “import pandas as pd\n”, “census = pd.read_parquet(‘/Users/georgexiu/Projects/2021UKCensus/Data/Census2021/pqdb’)” ] }, { “cell_type”: “code”, “execution_count”: 33, “metadata”: {}, “outputs”: [ { “name”: “stderr”, “output_type”: “stream”, “text”: [ “/var/folders/0n/m6x4wgqx54d60q60w__15kww0000gn/T/ipykernel_50082/1364155699.py:1: DtypeWarning: Columns (0) have mixed types. Specify dtype option on import or set low_memory=False.\n”, “ flow = pd.read_csv(‘/Users/georgexiu/Downloads/ODMG01EW_OA.csv’).drop(columns=[&quot;Output Areas code&quot;, &quot;Output area of migrant origin code&quot;]).rename(columns={‘Output area of migrant origin label’: ‘origin’, ‘Output Areas label’: ‘destination’, ‘Count’: ‘flow’})\n” ] } ], “source”: [ “flow = pd.read_csv(‘/Users/georgexiu/Downloads/ODMG01EW_OA.csv’).drop(columns=[&quot;Output Areas code&quot;, &quot;Output area of migrant origin code&quot;]).rename(columns={‘Output area of migrant origin label’: ‘origin’, ‘Output Areas label’: ‘destination’, ‘Count’: ‘flow’})\n”, “flow = flow[~flow.origin.str.contains(&quot; &quot;)].set_index([‘origin’, ‘destination’]).sort_index()[‘flow’]” ] }, { “cell_type”: “code”, “execution_count”: 34, “metadata”: {}, “outputs”: [ { “data”: { “text/plain”: [ “origin destination\n”, “E00000001 E00000020 1\n”, “ E00004593 1\n”, “ E00006106 4\n”, “ E00013966 1\n”, “ E00023503 2\n”, “ ..\n”, “W00010697 W00003846 1\n”, “ W00003916 3\n”, “ W00004217 1\n”, “ W00004735 1\n”, “ W00010264 1\n”, “Name: flow, Length: 3272417, dtype: int64” ] }, “execution_count”: 34, “metadata”: {}, “output_type”: “execute_result” } ], “source”: [ “flow” ] }, { “cell_type”: “code”, “execution_count”: null, “metadata”: {}, “outputs”: [], “source”: [] }, { “cell_type”: “markdown”, “metadata”: {}, “source”: [] } ], “metadata”: { “kernelspec”: { “display_name”: “pyclear”, “language”: “python”, “name”: “python3” }, “language_info”: { “codemirror_mode”: { “name”: “ipython”, “version”: 3 }, “file_extension”: “.py”, “mimetype”: “text/x-python”, “name”: “python”, “nbconvert_exporter”: “python”, “pygments_lexer”: “ipython3”, “version”: “3.13.0” } }, “nbformat”: 4, “nbformat_minor”: 2 }" />
+<meta property="og:description" content="{ “cells”: [ { “cell_type”: “markdown”, “metadata”: {}, “source”: [ “- Here is where we can find the geography of census 2021\n”, “- and I am finally able to find the flow data of UK census.” ] }, { “cell_type”: “code”, “execution_count”: 4, “metadata”: {}, “outputs”: [], “source”: [ “# census itself\n”, “import pandas as pd\n”, “census = pd.read_parquet(‘/Users/georgexiu/Projects/2021UKCensus/Data/Census2021/pqdb’)” ] }, { “cell_type”: “code”, “execution_count”: 33, “metadata”: {}, “outputs”: [ { “name”: “stderr”, “output_type”: “stream”, “text”: [ “/var/folders/0n/m6x4wgqx54d60q60w__15kww0000gn/T/ipykernel_50082/1364155699.py:1: DtypeWarning: Columns (0) have mixed types. Specify dtype option on import or set low_memory=False.\n”, “ flow = pd.read_csv(‘/Users/georgexiu/Downloads/ODMG01EW_OA.csv’).drop(columns=[&quot;Output Areas code&quot;, &quot;Output area of migrant origin code&quot;]).rename(columns={‘Output area of migrant origin label’: ‘origin’, ‘Output Areas label’: ‘destination’, ‘Count’: ‘flow’})\n” ] } ], “source”: [ “flow = pd.read_csv(‘/Users/georgexiu/Downloads/ODMG01EW_OA.csv’).drop(columns=[&quot;Output Areas code&quot;, &quot;Output area of migrant origin code&quot;]).rename(columns={‘Output area of migrant origin label’: ‘origin’, ‘Output Areas label’: ‘destination’, ‘Count’: ‘flow’})\n”, “flow = flow[~flow.origin.str.contains(&quot; &quot;)].set_index([‘origin’, ‘destination’]).sort_index()[‘flow’]” ] }, { “cell_type”: “code”, “execution_count”: 34, “metadata”: {}, “outputs”: [ { “data”: { “text/plain”: [ “origin destination\n”, “E00000001 E00000020 1\n”, “ E00004593 1\n”, “ E00006106 4\n”, “ E00013966 1\n”, “ E00023503 2\n”, “ ..\n”, “W00010697 W00003846 1\n”, “ W00003916 3\n”, “ W00004217 1\n”, “ W00004735 1\n”, “ W00010264 1\n”, “Name: flow, Length: 3272417, dtype: int64” ] }, “execution_count”: 34, “metadata”: {}, “output_type”: “execute_result” } ], “source”: [ “flow” ] }, { “cell_type”: “code”, “execution_count”: null, “metadata”: {}, “outputs”: [], “source”: [] }, { “cell_type”: “markdown”, “metadata”: {}, “source”: [] } ], “metadata”: { “kernelspec”: { “display_name”: “pyclear”, “language”: “python”, “name”: “python3” }, “language_info”: { “codemirror_mode”: { “name”: “ipython”, “version”: 3 }, “file_extension”: “.py”, “mimetype”: “text/x-python”, “name”: “python”, “nbconvert_exporter”: “python”, “pygments_lexer”: “ipython3”, “version”: “3.13.0” } }, “nbformat”: 4, “nbformat_minor”: 2 }" />
+<link rel="canonical" href="http://localhost:4000/posts/PrisonStarter/" />
+<meta property="og:url" content="http://localhost:4000/posts/PrisonStarter/" />
 <meta property="og:site_name" content="Gezhi Xiu" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-11-06T00:00:00+08:00" />
+<meta property="article:published_time" content="2024-11-15T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Aging mobility" />
+<meta property="twitter:title" content="Prisonstarter" />
 <meta name="twitter:site" content="@xiu_george23" />
+<meta name="twitter:creator" content="@Gezhi Xiu" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-06T19:03:21+08:00","datePublished":"2024-11-06T00:00:00+08:00","description":"Short summary of the post.","headline":"Aging mobility","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/CensusExt/"},"url":"http://localhost:4000/posts/CensusExt/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gezhi Xiu"},"dateModified":"2024-11-15T00:00:00+08:00","datePublished":"2024-11-15T00:00:00+08:00","description":"{ “cells”: [ { “cell_type”: “markdown”, “metadata”: {}, “source”: [ “- Here is where we can find the geography of census 2021\\n”, “- and I am finally able to find the flow data of UK census.” ] }, { “cell_type”: “code”, “execution_count”: 4, “metadata”: {}, “outputs”: [], “source”: [ “# census itself\\n”, “import pandas as pd\\n”, “census = pd.read_parquet(‘/Users/georgexiu/Projects/2021UKCensus/Data/Census2021/pqdb’)” ] }, { “cell_type”: “code”, “execution_count”: 33, “metadata”: {}, “outputs”: [ { “name”: “stderr”, “output_type”: “stream”, “text”: [ “/var/folders/0n/m6x4wgqx54d60q60w__15kww0000gn/T/ipykernel_50082/1364155699.py:1: DtypeWarning: Columns (0) have mixed types. Specify dtype option on import or set low_memory=False.\\n”, “ flow = pd.read_csv(‘/Users/georgexiu/Downloads/ODMG01EW_OA.csv’).drop(columns=[&quot;Output Areas code&quot;, &quot;Output area of migrant origin code&quot;]).rename(columns={‘Output area of migrant origin label’: ‘origin’, ‘Output Areas label’: ‘destination’, ‘Count’: ‘flow’})\\n” ] } ], “source”: [ “flow = pd.read_csv(‘/Users/georgexiu/Downloads/ODMG01EW_OA.csv’).drop(columns=[&quot;Output Areas code&quot;, &quot;Output area of migrant origin code&quot;]).rename(columns={‘Output area of migrant origin label’: ‘origin’, ‘Output Areas label’: ‘destination’, ‘Count’: ‘flow’})\\n”, “flow = flow[~flow.origin.str.contains(&quot; &quot;)].set_index([‘origin’, ‘destination’]).sort_index()[‘flow’]” ] }, { “cell_type”: “code”, “execution_count”: 34, “metadata”: {}, “outputs”: [ { “data”: { “text/plain”: [ “origin destination\\n”, “E00000001 E00000020 1\\n”, “ E00004593 1\\n”, “ E00006106 4\\n”, “ E00013966 1\\n”, “ E00023503 2\\n”, “ ..\\n”, “W00010697 W00003846 1\\n”, “ W00003916 3\\n”, “ W00004217 1\\n”, “ W00004735 1\\n”, “ W00010264 1\\n”, “Name: flow, Length: 3272417, dtype: int64” ] }, “execution_count”: 34, “metadata”: {}, “output_type”: “execute_result” } ], “source”: [ “flow” ] }, { “cell_type”: “code”, “execution_count”: null, “metadata”: {}, “outputs”: [], “source”: [] }, { “cell_type”: “markdown”, “metadata”: {}, “source”: [] } ], “metadata”: { “kernelspec”: { “display_name”: “pyclear”, “language”: “python”, “name”: “python3” }, “language_info”: { “codemirror_mode”: { “name”: “ipython”, “version”: 3 }, “file_extension”: “.py”, “mimetype”: “text/x-python”, “name”: “python”, “nbconvert_exporter”: “python”, “pygments_lexer”: “ipython3”, “version”: “3.13.0” } }, “nbformat”: 4, “nbformat_minor”: 2 }","headline":"Prisonstarter","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/PrisonStarter/"},"url":"http://localhost:4000/posts/PrisonStarter/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Aging mobility | Gezhi Xiu
+  <title>Prisonstarter | Gezhi Xiu
   </title>
 
   <!--
@@ -432,7 +434,7 @@
         
           
             
-              <span>Aging mobility</span>
+              <span>Prisonstarter</span>
             
 
           
@@ -541,9 +543,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Aging mobility</h1>
-    
-      <p class="post-desc fw-light mb-4">Short summary of the post.</p>
+    <h1 data-toc-skip>Prisonstarter</h1>
     
 
     <div class="post-meta text-muted">
@@ -560,41 +560,18 @@
 
 <time
   
-  data-ts="1730822400"
+  data-ts="1731600000"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Nov  6, 2024
+  Nov 15, 2024
 </time>
 
       </span>
 
       <!-- lastmod date -->
-      
-        <span>
-          Updated
-          <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1730891001"
-  data-df="ll"
-  
-    data-bs-toggle="tooltip" data-bs-placement="bottom"
-  
->
-  Nov  6, 2024
-</time>
-
-        </span>
       
 
       
@@ -608,10 +585,7 @@
 
           <em>
             
-              
-                <a href="gxiu.github.io">Gezhi Xiu</a>
-                
-              
+              <a href="https://twitter.com/xiu_george23">Gezhi Xiu</a>
             
           </em>
         </span>
@@ -641,7 +615,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="26 words"
+  title="280 words"
 >
   <em>1 min</em> read</span>
 
@@ -651,65 +625,121 @@
   </header>
 
   <div class="content">
-    <p><code class="language-plaintext highlighter-rouge"><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>inline code part
-</pre></td></tr></tbody></table></code></p>
-
-<!-- Block math, keep all blank lines -->
-
-<p>$\phi$</p>
-
-<!-- Equation numbering, keep all blank lines  -->
-
-\[\begin{equation}
-  LaTeX_math_expression
-  \label{eq:label_name}
-\end{equation}\]
-
-<p>Can be referenced as \eqref{eq:label_name}.</p>
-
-<!-- Inline math in lines, NO blank lines -->
-
-<p>“Lorem ipsum dolor sit amet, \(LaTeX_math_expression\) consectetur adipiscing elit.”</p>
-
-<!-- Inline math in lists, escape the first `$` -->
-
-<ol>
-  <li>
-\[LaTeX_math_expression\]
-  </li>
-  <li>
-\[LaTeX_math_expression\]
-  </li>
-  <li>
-\[LaTeX_math_expression\]
-  </li>
-</ol>
+    {
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- [Here](https://geoportal.statistics.gov.uk/maps/f23c50d2bffa4a8d9693bcf4ed72bdaf) is where we can find the geography of census 2021\n",
+    "- and I am finally able to find the flow data of UK census."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# census itself\n",
+    "import pandas as pd\n",
+    "census = pd.read_parquet('/Users/georgexiu/Projects/2021UKCensus/Data/Census2021/pqdb')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/var/folders/0n/m6x4wgqx54d60q60w__15kww0000gn/T/ipykernel_50082/1364155699.py:1: DtypeWarning: Columns (0) have mixed types. Specify dtype option on import or set low_memory=False.\n",
+      "  flow = pd.read_csv('/Users/georgexiu/Downloads/ODMG01EW_OA.csv').drop(columns=[\"Output Areas code\", \"Output area of migrant origin code\"]).rename(columns={'Output area of migrant origin label': 'origin', 'Output Areas label': 'destination', 'Count': 'flow'})\n"
+     ]
+    }
+   ],
+   "source": [
+    "flow = pd.read_csv('/Users/georgexiu/Downloads/ODMG01EW_OA.csv').drop(columns=[\"Output Areas code\", \"Output area of migrant origin code\"]).rename(columns={'Output area of migrant origin label': 'origin', 'Output Areas label': 'destination', 'Count': 'flow'})\n",
+    "flow = flow[~flow.origin.str.contains(\" \")].set_index(['origin', 'destination']).sort_index()['flow']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "origin     destination\n",
+       "E00000001  E00000020      1\n",
+       "           E00004593      1\n",
+       "           E00006106      4\n",
+       "           E00013966      1\n",
+       "           E00023503      2\n",
+       "                         ..\n",
+       "W00010697  W00003846      1\n",
+       "           W00003916      3\n",
+       "           W00004217      1\n",
+       "           W00004735      1\n",
+       "           W00010264      1\n",
+       "Name: flow, Length: 3272417, dtype: int64"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "flow"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "pyclear",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
 
   </div>
 
   <div class="post-tail-wrapper text-muted">
     <!-- categories -->
     
-      <div class="post-meta mb-3">
-        <i class="far fa-folder-open fa-fw me-1"></i>
-        
-          <a href="/categories/academia/">Academia</a>,
-          <a href="/categories/mobility/">Mobility</a>
-      </div>
-    
 
     <!-- tags -->
-    
-      <div class="post-tags">
-        <i class="fa fa-tags fa-fw me-1"></i>
-        
-          <a
-            href="/tags/academia/"
-            class="post-tag no-text-decoration"
-          >academia</a>
-        
-      </div>
     
 
     <div
@@ -743,21 +773,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Aging%20mobility%20-%20Gezhi%20Xiu&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FCensusExt%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Prisonstarter%20-%20Gezhi%20Xiu&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FPrisonStarter%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Aging%20mobility%20-%20Gezhi%20Xiu&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FCensusExt%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Prisonstarter%20-%20Gezhi%20Xiu&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FPrisonStarter%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FCensusExt%2F&text=Aging%20mobility%20-%20Gezhi%20Xiu" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FPrisonStarter%2F&text=Prisonstarter%20-%20Gezhi%20Xiu" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -933,10 +963,6 @@
 
 
 
-  
-
-  
-    
 
 
 
@@ -957,19 +983,19 @@
   
 
   
-    <div class="btn btn-outline-primary disabled" aria-label="Older">
-      <p>-</p>
-    </div>
-  
-
-  
     <a
       href="/posts/Packages/"
       class="btn btn-outline-primary"
-      aria-label="Newer"
+      aria-label="Older"
     >
       <p>Interesting Python Packages</p>
     </a>
+  
+
+  
+    <div class="btn btn-outline-primary disabled" aria-label="Newer">
+      <p>-</p>
+    </div>
   
 </nav>
 
@@ -1212,16 +1238,9 @@
 
   
 
-  
-    
-
-    
-
-  
 
 
-
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js,npm/mermaid@11.0.2/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js"></script>
 
 
 
@@ -1232,11 +1251,6 @@
 <script src="/assets/js/dist/post.min.js"></script>
 
 
-  <!-- MathJax -->
-  <script src="/assets/js/data/mathjax.js"></script>
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
-
 
 <!-- Pageviews -->
 
@@ -1244,59 +1258,6 @@
 
   
 
-
-
-  <!-- mermaid-js loader -->
-<script type="text/javascript">
-  function updateMermaid(event) {
-    if (event.source === window && event.data && event.data.direction === ModeToggle.ID) {
-      const mode = event.data.message;
-
-      if (typeof mermaid === 'undefined') {
-        return;
-      }
-
-      let expectedTheme = mode === ModeToggle.DARK_MODE ? 'dark' : 'default';
-      let config = { theme: expectedTheme };const mermaidList = document.getElementsByClassName('mermaid');
-
-      [...mermaidList].forEach((elem) => {
-        const svgCode = elem.previousSibling.children.item(0).innerHTML;
-        elem.innerHTML = svgCode;
-        elem.removeAttribute('data-processed');
-      });
-
-      mermaid.initialize(config);
-      mermaid.init(undefined, '.mermaid');
-    }
-  }
-
-  (function () {
-    let initTheme = 'default';
-    const html = document.documentElement;
-
-    if (
-      (html.hasAttribute('data-mode') && html.getAttribute('data-mode') === 'dark') ||
-      (!html.hasAttribute('data-mode') && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      initTheme = 'dark';
-    }
-
-    let mermaidConf = {
-      theme: initTheme};const basicList = document.getElementsByClassName('language-mermaid');
-    [...basicList].forEach((elem) => {
-      const svgCode = elem.textContent;
-      const backup = elem.parentElement;
-      backup.classList.add('d-none');let mermaid = document.createElement('pre');
-      mermaid.classList.add('mermaid');
-      const text = document.createTextNode(svgCode);
-      mermaid.appendChild(text);
-      backup.after(mermaid);
-    });
-
-    mermaid.initialize(mermaidConf);
-    window.addEventListener('message', updateMermaid);
-  })();
-</script>
 
 
 

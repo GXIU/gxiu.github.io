@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Gezhi Xiu</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-11-06T19:03:05+08:00</updated>
+  <updated>2024-11-15T21:54:41+08:00</updated>
   <author>
     <name>Gezhi Xiu</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,51 @@
 
   
   <entry>
+    <title>Prisonstarter</title>
+    <link href="http://localhost:4000/posts/PrisonStarter/" rel="alternate" type="text/html" title="Prisonstarter" />
+    <published>2024-11-15T00:00:00+08:00</published>
+  
+    <updated>2024-11-15T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/PrisonStarter/</id>
+    <content src="http://localhost:4000/posts/PrisonStarter/" />
+    <author>
+      <name>Gezhi Xiu</name>
+    </author>
+
+  
+    
+  
+
+  <summary>{
+ “cells”: [
+  {
+   “cell_type”: “markdown”,
+   “metadata”: {},
+   “source”: [
+    “- Here is where we can find the geography of census 2021\n”,
+    “- and I am finally able to find the flow data of UK census.”
+   ]
+  },
+  {
+   “cell_type”: “code”,
+   “execution_count”: 4,
+   “metadata”: {},
+   “outputs”: [],
+   “source”: [
+    “# census itself\n”,
+    “import pandas as pd\n”,
+    “census = pd...</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>Interesting Python Packages</title>
     <link href="http://localhost:4000/posts/Packages/" rel="alternate" type="text/html" title="Interesting Python Packages" />
     <published>2024-11-06T00:00:00+08:00</published>
   
-    <updated>2024-11-06T00:00:00+08:00</updated>
+    <updated>2024-11-06T19:03:21+08:00</updated>
   
     <id>http://localhost:4000/posts/Packages/</id>
     <content src="http://localhost:4000/posts/Packages/" />
@@ -48,7 +88,7 @@
     <link href="http://localhost:4000/posts/CensusExt/" rel="alternate" type="text/html" title="Aging mobility" />
     <published>2024-11-06T00:00:00+08:00</published>
   
-    <updated>2024-11-06T00:00:00+08:00</updated>
+    <updated>2024-11-06T19:03:21+08:00</updated>
   
     <id>http://localhost:4000/posts/CensusExt/</id>
     <content src="http://localhost:4000/posts/CensusExt/" />

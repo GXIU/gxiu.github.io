@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "Prisonstarter",
+    "url": "/posts/PrisonStarter/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-11-15 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "{ \"cells\": [  {   \"cell_type\": \"markdown\",   \"metadata\": {},   \"source\": [    \"- [Here](https://geoportal.statistics.gov.uk/maps/f23c50d2bffa4a8d9693bcf4ed72bdaf) is where we can find the geography...",
+    "content": "{ \"cells\": [  {   \"cell_type\": \"markdown\",   \"metadata\": {},   \"source\": [    \"- [Here](https://geoportal.statistics.gov.uk/maps/f23c50d2bffa4a8d9693bcf4ed72bdaf) is where we can find the geography of census 2021\\n\",    \"- and I am finally able to find the flow data of UK census.\"   ]  },  {   \"cell_type\": \"code\",   \"execution_count\": 4,   \"metadata\": {},   \"outputs\": [],   \"source\": [    \"# census itself\\n\",    \"import pandas as pd\\n\",    \"census = pd.read_parquet('/Users/georgexiu/Projects/2021UKCensus/Data/Census2021/pqdb')\"   ]  },  {   \"cell_type\": \"code\",   \"execution_count\": 33,   \"metadata\": {},   \"outputs\": [    {     \"name\": \"stderr\",     \"output_type\": \"stream\",     \"text\": [      \"/var/folders/0n/m6x4wgqx54d60q60w__15kww0000gn/T/ipykernel_50082/1364155699.py:1: DtypeWarning: Columns (0) have mixed types. Specify dtype option on import or set low_memory=False.\\n\",      \"  flow = pd.read_csv('/Users/georgexiu/Downloads/ODMG01EW_OA.csv').drop(columns=[\\\"Output Areas code\\\", \\\"Output area of migrant origin code\\\"]).rename(columns={'Output area of migrant origin label': 'origin', 'Output Areas label': 'destination', 'Count': 'flow'})\\n\"     ]    }   ],   \"source\": [    \"flow = pd.read_csv('/Users/georgexiu/Downloads/ODMG01EW_OA.csv').drop(columns=[\\\"Output Areas code\\\", \\\"Output area of migrant origin code\\\"]).rename(columns={'Output area of migrant origin label': 'origin', 'Output Areas label': 'destination', 'Count': 'flow'})\\n\",    \"flow = flow[~flow.origin.str.contains(\\\" \\\")].set_index(['origin', 'destination']).sort_index()['flow']\"   ]  },  {   \"cell_type\": \"code\",   \"execution_count\": 34,   \"metadata\": {},   \"outputs\": [    {     \"data\": {      \"text/plain\": [       \"origin     destination\\n\",       \"E00000001  E00000020      1\\n\",       \"           E00004593      1\\n\",       \"           E00006106      4\\n\",       \"           E00013966      1\\n\",       \"           E00023503      2\\n\",       \"                         ..\\n\",       \"W00010697  W00003846      1\\n\",       \"           W00003916      3\\n\",       \"           W00004217      1\\n\",       \"           W00004735      1\\n\",       \"           W00010264      1\\n\",       \"Name: flow, Length: 3272417, dtype: int64\"      ]     },     \"execution_count\": 34,     \"metadata\": {},     \"output_type\": \"execute_result\"    }   ],   \"source\": [    \"flow\"   ]  },  {   \"cell_type\": \"code\",   \"execution_count\": null,   \"metadata\": {},   \"outputs\": [],   \"source\": []  },  {   \"cell_type\": \"markdown\",   \"metadata\": {},   \"source\": []  } ], \"metadata\": {  \"kernelspec\": {   \"display_name\": \"pyclear\",   \"language\": \"python\",   \"name\": \"python3\"  },  \"language_info\": {   \"codemirror_mode\": {    \"name\": \"ipython\",    \"version\": 3   },   \"file_extension\": \".py\",   \"mimetype\": \"text/x-python\",   \"name\": \"python\",   \"nbconvert_exporter\": \"python\",   \"pygments_lexer\": \"ipython3\",   \"version\": \"3.13.0\"  } }, \"nbformat\": 4, \"nbformat_minor\": 2}"
+  },
+  
+  {
     "title": "Interesting Python Packages",
     "url": "/posts/Packages/",
     "categories": "toolkits",
@@ -30,8 +47,8 @@
 
 
     
-    "snippet": "inline code part\\[LaTeX_math_expression\\]\\[\\begin{equation}  LaTeX_math_expression  \\label{eq:label_name}\\end{equation}\\]Can be referenced as \\eqref{eq:label_name}.“Lorem ipsum dolor sit amet, \\(La...",
-    "content": "inline code part\\[LaTeX_math_expression\\]\\[\\begin{equation}  LaTeX_math_expression  \\label{eq:label_name}\\end{equation}\\]Can be referenced as \\eqref{eq:label_name}.“Lorem ipsum dolor sit amet, \\(LaTeX_math_expression\\) consectetur adipiscing elit.”  \\(LaTeX_math_expression\\)  \\(LaTeX_math_expression\\)  \\(LaTeX_math_expression\\)"
+    "snippet": "inline code part$\\phi$\\[\\begin{equation}  LaTeX_math_expression  \\label{eq:label_name}\\end{equation}\\]Can be referenced as \\eqref{eq:label_name}.“Lorem ipsum dolor sit amet, \\(LaTeX_math_expression...",
+    "content": "inline code part$\\phi$\\[\\begin{equation}  LaTeX_math_expression  \\label{eq:label_name}\\end{equation}\\]Can be referenced as \\eqref{eq:label_name}.“Lorem ipsum dolor sit amet, \\(LaTeX_math_expression\\) consectetur adipiscing elit.”  \\[LaTeX_math_expression\\]    \\[LaTeX_math_expression\\]    \\[LaTeX_math_expression\\]  "
   }
   
 ]
